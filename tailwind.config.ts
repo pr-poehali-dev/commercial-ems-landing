@@ -7,6 +7,7 @@ export default {
 		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
 		"./src/**/*.{ts,tsx}",
+			"./1780052492862166683.html"
 	],
 	prefix: "",
 	theme: {
@@ -17,8 +18,20 @@ export default {
 				'2xl': '1400px'
 			}
 		},
+		fontFamily: {
+			manrope: ['Manrope', 'sans-serif'],
+			inter: ['Inter', 'sans-serif'],
+		},
 		extend: {
 			colors: {
+				brand: {
+					bg: '#F7F9FC',
+					text: '#1A2A3A',
+					urgent: '#C44536',
+					trust: '#2C5F7A',
+					call: '#1F6E43',
+					dark: '#1A2A3A',
+				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
