@@ -154,6 +154,45 @@
     }
   }
 
+  @keyframes shake {
+    0%,
+    100% {
+      transform: translateX(0) rotate(0deg);
+    }
+    20% {
+      transform: translateX(-3px) rotate(-1deg);
+    }
+    40% {
+      transform: translateX(3px) rotate(1deg);
+    }
+    60% {
+      transform: translateX(-2px) rotate(-0.5deg);
+    }
+    80% {
+      transform: translateX(2px) rotate(0.5deg);
+    }
+  }
+  @keyframes brainwave {
+    0%,
+    100% {
+      opacity: 0.3;
+      transform: scaleY(0.5);
+    }
+    50% {
+      opacity: 1;
+      transform: scaleY(1);
+    }
+  }
+  @keyframes crisisPulse {
+    0%,
+    100% {
+      box-shadow: 0 0 0 0 rgba(232, 106, 63, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 0 14px rgba(232, 106, 63, 0);
+    }
+  }
+
   .animate-fade-in-up {
     animation: fadeInUp 0.6s ease-out both;
   }
@@ -162,6 +201,39 @@
   }
   .animate-pulse-ring {
     animation: pulse-ring 2s ease-out infinite;
+  }
+  .hover-shake:hover {
+    animation: shake 0.4s ease-in-out;
+  }
+  .animate-crisis-pulse {
+    animation: crisisPulse 2.2s ease-out infinite;
+  }
+  .noise-bg {
+    background-image:
+      repeating-radial-gradient(
+        circle at 0 0,
+        transparent 0,
+        rgba(0, 0, 0, 0.025) 1px,
+        transparent 2px
+      ),
+      repeating-radial-gradient(
+        circle at 50% 50%,
+        transparent 0,
+        rgba(255, 255, 255, 0.02) 1px,
+        transparent 2px
+      );
+    background-size:
+      3px 3px,
+      4px 4px;
+  }
+  .noise-bg-dark {
+    background-image: repeating-radial-gradient(
+      circle at 0 0,
+      transparent 0,
+      rgba(255, 255, 255, 0.018) 1px,
+      transparent 2px
+    );
+    background-size: 3px 3px;
   }
 
   .delay-100 {
